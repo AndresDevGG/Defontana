@@ -1,0 +1,27 @@
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import './theme.scss';
+
+@import '@angular/material/theming';
+
+// Define tus colores personalizados
+$custom-primary: mat-palette($md-pokeblue);
+$custom-accent: mat-palette($md-pokeyellow, A200, A100, A400);
+$custom-warn: mat-palette($md-pokered);
+
+// Crea tu propia paleta de colores utilizando los colores personalizados
+$custom-theme: mat-light-theme(
+  $custom-primary,
+  $custom-accent,
+  $custom-warn
+);
+
+// Aplica el tema personalizado a toda la aplicación
+@include angular-material-theme($custom-theme);
+
+.pointer:hover {
+  cursor: pointer !important;
+}

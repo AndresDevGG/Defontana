@@ -1,0 +1,39 @@
+@import './../../../theme.scss';
+@import '@angular/material/theming';
+
+.results-container {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+  max-height: 150px;
+  overflow-y: auto;
+  width: 100%;
+  // border: 1px solid mat-color($md-pokeblue, 400);
+  border-radius: 0px 0px 5px 5px;
+  border-top: none;
+}
+
+.item-filter:hover {
+  cursor: pointer;
+  background-color: aliceblue;
+}
+
+.form-control {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: mat-color($md-pokeblue, 500);
+  border-radius: 5px;
+}
+
+

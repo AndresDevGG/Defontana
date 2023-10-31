@@ -1,0 +1,18 @@
+<mat-card class="shadow p-1">
+  <app-search-pokemon class="border-b" (onSearch)="filterResults($event)" ></app-search-pokemon>
+  <mat-list role="list">
+    <mat-list-item *ngFor="let pokemon of obs | async" role="listitem" class="pointer">
+      <div class="poke-item" (click)="getPokemon(pokemon.name)">
+        {{ pokemon.name | titlecase}}
+        <img class="pointer pokeball"  src="assets/pokeball.png" alt="">
+        <!-- <button mat-icon-button color="primary" (click)="getPokemon(pokemon.name)">
+          <mat-icon>visibility</mat-icon>
+        </button> -->
+      </div>
+
+    </mat-list-item>
+  </mat-list>
+  <mat-paginator #paginator [length]="pokemons.length" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+  </mat-paginator>
+</mat-card>
+

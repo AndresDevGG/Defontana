@@ -1,0 +1,16 @@
+@import './../../../theme.scss';
+@import '@angular/material/theming';
+
+.poke-item {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.border-b {
+  border-bottom: mat-color($md-pokeblue, 400) 1px solid;
+}
+
+.pokeball {
+  width: 25px;
+}

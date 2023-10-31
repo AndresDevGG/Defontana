@@ -1,0 +1,11 @@
+<mat-card class="shadow p-1 mt-3">
+
+  <h2 class="mb-0">Resumen</h2>
+  <div class="row mx-0">
+    <div *ngFor="let item of summary | keyvalue" class="card col-2 col-lg-1 p-1 m-1 text-center pointer">
+      <span class="fw-bold">{{ item.key }}</span> {{ item.value }}
+
+    </div>
+  </div>
+
+</mat-card>

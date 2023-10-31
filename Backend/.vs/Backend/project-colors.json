@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1ae745b1-6bf8-4392-9218-eca4df7b0e04": {
+      "ProjectGuid": "1ae745b1-6bf8-4392-9218-eca4df7b0e04",
+      "DisplayName": "DefontanaApp",
+      "ColorIndex": 0
+    },
+    "266b0da8-34d9-4d8c-b155-9ba365ddb178": {
+      "ProjectGuid": "266b0da8-34d9-4d8c-b155-9ba365ddb178",
+      "DisplayName": "Persistence",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}

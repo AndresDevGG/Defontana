@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obtener el color de una imagen</title>
+</head>
+<body>
+    <input type="file" id="fileInput" accept="image/*" onchange="loadImage(this)">
+    <canvas id="colorCanvas" width="1" height="1" style="display: none;"></canvas>
+    <div id="colorResult">Color:</div>
+
+    <script>
+        function loadImage(input) {
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    const image = new Image();
+                    image.src = e.target.result;
+
+                    image.onload = function () {
+                        const canvas = document.getElementById('colorCanvas');
+                        const context = canvas.getContext('2d');
+                        context.drawImage(image, 0, 0, 1, 1);
+
+                        const pixelData = context.getImageData(0, 0, 1, 1).data;
+                        const color = `rgb(${pixelData[0]}, ${pixelData[1]}, ${pixelData[2]})`;
+
+                        const colorResult = document.getElementById('colorResult');
+                        colorResult.textContent = `Color: ${color}`;
+                    };
+                };
+
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+</html>

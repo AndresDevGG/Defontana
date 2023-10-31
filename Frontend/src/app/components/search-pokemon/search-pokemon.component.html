@@ -1,0 +1,20 @@
+<div class="d-flex">
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="searchTerm"
+    placeholder="Buscar"
+    (ngModelChange)="filterItems()"
+    (blur)="clean()"
+  />
+  <button mat-icon-button color="primary" (click)="eventSearch()">
+    <mat-icon>search</mat-icon>
+  </button>
+</div>
+<div class="results-container shadow" *ngIf="filterPokemons.length > 0">
+  <div *ngFor="let item of filterPokemons" class="item-filter mx-4" (click)="selectedItem(item.name)">
+    <p
+      [innerHTML]="formatName(item.name)"
+    ></p>
+  </div>
+</div>
